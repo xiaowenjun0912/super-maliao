@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/zshStyle.css">
+	<link rel="stylesheet" href="css/home.css">
+    
+
+
+	<script src="js/jquery-1.12.4.js"></script>
+	<script src="js/home.js"></script>
+
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<style>
+.box{
+	width:800px;
+	margin:0 auto;
+	font-family:"微软雅黑";
+	position: relative;
+	}
+.s-title{
+		width:322px;
+		margin:0 auto;
+		font-size:25px;
+		color:#333;
+		/*text-align:center;*/
+		font-family:"microsoft yahei"; 
+		font-weight:normal; /*不让标题加粗	*/
+		position: absolute;
+		left:50%;
+		margin-left: -200px;
+
+	}
+	.str{
+		font-weight:bold; /*让字体变粗*/
+		}
+	.subtitle{
+		text-align:center;
+		font-size:14px;
+		}
+	.date{
+		color:#abc;}
+    .sina{
+		color:#900;}
+	p{
+		color:#333;
+		font-size:14px;
+		text-indent:2em; /*首行缩进两个字*/
+		line-height:23px; /*文字行高*/
+		}	
+	.weibo{
+		color:#39C;}
+	#fooot{
+		text-align: right;
+	}
+</style>
+	<script>
+	  $(function () {
+	    var $cleft = $(".class-l");
+	    var $cright = $(".class-r");
+
+
+	    $cleft.mouseenter(function (){
+          $(".class-l div").css({
+			"display" : "block",
+            "opacity" : 0.7,
+			"z-index":1
+		  });
+        });
+        $cleft.mouseleave(function (){
+          $(".class-l div").hide(500);
+        });
+
+        $cright.mouseenter(function (){
+          $(".class-r div").css({
+            "display" : "block",
+            "opacity" : 0.7,
+            "z-index":1
+          });
+        });
+        $cright.mouseleave(function () {
+        	$(".class-r div").hide(500);
+        });
+
+
+        var $video = $('.video');
+
+        // var getRandomColor = function () {
+        //   /*0-255*/
+        //   var r = Math.floor(256 * Math.random());
+        //   var g = Math.floor(256 * Math.random());
+        //   var b = Math.floor(256 * Math.random());
+        //   return 'rgb(' + r + ',' + g + ',' + b + ')';
+        // }
+
+        var getRandomTop = function () {
+          /*height() jquery方法  0-视频高度 */
+          var videoHeight = $video.height();
+          return videoHeight * Math.random();
+        }
+
+        /*点击发送*/
+        $('[type="button"]').click(function () {
+          /*val() jquery方法 获取文本输入框的值*/
+          //var text = $('[type="text"]').val().trim();
+          /* jquery 工具函数  */
+          var text = $.trim($('[type="text"]').val());
+
+          /*没有输入内容就停止执行*/
+          if (!text) return false;
+          /*弹幕*/
+          $('<span></span>').text(text).css({
+            'position':'absolute',
+            'width':200,
+            'height':30,
+            'font-size':'20px',
+            'font-weight':'bold',
+            'right':-200,
+            'color':"white",
+            'top':getRandomTop()
+          }).animate({'right':1000},10000,'linear',function () {
+            /*动画结束之后需要删除  自杀*/
+            $(this).remove();
+          }).appendTo($video);
+          /*清空输入框*/
+          $('[type="text"]').val('');
+        });
+        /*回车发送*/
+        $('[type="text"]').keyup(function (event) {
+          //console.log(event.keyCode);
+          if(event.keyCode == 13){
+            /*触发点击事件  执行发射操作*/
+            $('[type="button"]').click();
+          }
+        });
+
+
+      // var $boxType = $(".zshType");
+        // $boxType.mouseenter(function (){
+        // 	$(".arrow").show();
+        // });
+        //
+        // var num = 0;
+        // $(".arrow-right").click(function (){
+        //   num++;
+			// $(".last").fadeIn();
+			// $(".first").fadeOut();
+			// if(num > 1){
+        //       $(".first").fadeIn(500);
+        //       $(".last").fadeOut(500);
+			// }
+        // });
+        //
+        // $(".arrow-left").click(function (){
+        //   $(".first").fadeIn();
+        //   $(".last").fadeOut();
+        //   if(num > 1){
+        //     $(".last").fadeIn();
+        //     $(".first").fadeOut();
+		 //  }
+        // });
+
+	  });
+	</script>
+</head>
+<body>
+	<div id="header">
+		<div id="logo">
+		<h1>
+			<a href="#"><img src="imgs/logow.png" alt=""></a>
+			<img src="imgs/top.png" class="lo" alt="" >
+		</h1>
+		<ul id="headerright">
+			<li><a href="http://192.168.69.188/haoxue/index.html">首页</a></li>
+			<li><a href="http://192.168.69.188/haoxue/index.html">项目中心</a></li>
+			<li><a href="javascript:void(0)">关于我们</a></li>
+			<li><a href="http://192.168.69.188/bbs">论坛</a></li>
+		</ul>
+		</div>
+	</div>
+    <div class="box">
+<h1 class="s-title">网吧红人项目组--名称的由来</h1>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+
+
+<p>大概是2008年或者再以前，那时候我在一座省会城市里的一所偏僻的技校里读书，学的是计算机专业，看着这么高大上的专业名词，其实老师只是讲一些电脑的拆装机，Office等一些常用软件的使用，同学们年龄尚小，还未成年懂事，学个一技之长到了年龄出去工作；那时候总觉得时间很多，整天无所事事，懵懂度日，一边看成功学大师们的卖力演讲，一边闲鱼在宿舍床上甚至食堂打饭都要同学去带。  </p><br/>
+<p>那年暑假，我不甘心就这样闲鱼下去，没有像其他同学一样回家过着躺床上吹空调吃西瓜打游戏，一觉睡到12点的美滋滋生活；而是跑到学校附近的一家网吧去做网管。面试的时候，老板只问了我以下3个问题，我都回答是，就说明天就可以来上班了：
+</p><br/>
+<p>1.会不会电脑开机重启</p>
+<p>2.会不会拆机换配件比如插拔内存条</p>
+<p>3.工资每个月700块，晚班上到12点可以接受吗</p>
+<p>我从此便待在这家网吧里面，做着扫地打杂，偶尔有客人讲他的机器不行了，我跑上前去给他重启一下；</p><br/>
+<p> 网吧里有普通区和VIP区的分别；时值炎炎夏日，普通区却只放着几台大功率的风扇，呼呼吹着，离的稍远一点，还会汗流浃背。机器的配置也不高，勉强带的动当前流行的几个网络游戏而已，时不时还会卡一下，普通区不时有客人常给我抱怨机器卡，配置低，玩个劲舞团卡的爆不出来大，网上的小姐姐们都骂他不行；那个年代还没有智能手机，上网不如现在这样方便。1元钱一小时，4元钱就能通宵上网的价格还是会让普通区的客人络绎不绝，排队来抢机器。毕竟加上一桶泡面才7元钱的价格，就可以享受一宿的网上冲浪时光。</p><br/>
+<p>VIP区则不同，24小时空调开放，有冷暖饮水机，雀巢冲泡咖啡无限供应，而且老板引进了上网专用躺式沙发，累了困了都可以舒舒服服睡上一觉，醒了继续在虚拟世界追赶厮杀。但是5元钱一小时，40元钱通宵，1000元月卡（随时可以来上网那种），在08年普遍工资不高的情况下， 却不是每个人都可以接受的。只有不差钱的VIP客人躺卧在沙发上，他们通宵是不会吃泡面那种垃圾食品的。呼来唤去的让我帮他们带门口几十元的小炒，和红牛饮料。老板私下也叮嘱我要侍候好这些客户，多堆笑脸，都是网吧的金主，不可怠慢。所以我只能紧绷神经小心翼翼的当个跑腿小弟，生怕这些金主不满，受到老板的责骂。</p><br/>
+<p>只有网吧红人到店，才可以笑几声，所以至今我都还记得。</p><br/>
+<p>网吧红人是唯一自带瓷碗和老北京方便面到VIP区上网学习C语言编程的客人，他大概20多岁的年纪，好像是从干旱地区赶来上网，头发很油，很亮，我想大概是痒的不得了，半个月才会洗一次吧，每次来也都穿着一件旧衬衫，好像都不曾换过。网吧红人起初也玩过一段游戏，因为他的劲舞团账号是【葬暧荭亼oο﹏】。所以大家给他起个外号叫做网吧红人。</p><br/>
+<p>网吧红人每次也都是过来通宵上网，跟其他吃小炒喝红牛的不差钱VIP客人不同，他会在2点准时撕开两包老北京方便面，用瓷碗接热水去泡，用他的话来说就是一切都有计划，2点吃夜宵刚刚好，有助于健康。每到这个时候，其他客人都会笑他，“你是怕吃的早了，后面没得吃，饿的会快，撑不到早上通宵结束吧！”网吧红人便也不说话，只顾着接热水去泡他的老北京泡面。这时就会有客人叫到：“网吧红人，每次都自带老北京和瓷碗，店里不是有泡面吗，是不是你连泡面都买不起啊？”网吧红人这时候就会睁大眼睛争辩起来：“什么吃不起？我就喜欢吃老北京泡面罢了”“是吗？那怎么上次见你在路边炒面摊为了一块钱和别人争得脸红脖子粗！”网吧红人便涨红了脸，争辩道“哪里的事，你看我是会像那种为一块钱争论不休的人吗，再说一块钱的事用得争吗？”接着就是什么“自带餐具干净卫生”，“白色垃圾污染环境”“聚乙烯材料残留污染”让人难懂的话。引得大家都哄笑起来：店内外都充满了快活的空气。</p><br/>
+<p>听人家背地里谈论，网吧红人以前读书时候，也有很好的成绩，甚至拿到了名牌大学的录取通知书；后来为了让家里的弟弟妹妹上学，便放弃了读大学的资格，来到这座省会城市里打工，在工地上干活，补贴家用。但是网吧红人却没有放弃梦想，有人看到他在工地干活闲暇的时间，用笔在一个小本本上写工友们看不懂的数字和英文，听他说这些都是C语言的代码。</p><br/>
+<p>网吧红人吃完老北京，放下了碗；旁人便问道：“网吧红人，你学这些有什么用？有打游戏好玩吗？“网吧红人看着问他的人，显出不屑置辩的神气：”C语言可以做的事情可多了，你们玩的游戏有些都是要用C语言编写。”他们又接着说到：“那么厉害，你不是还在这里吃着泡面，还要自己带碗。”网吧红人的声音便弱了下来：“以后我是会进大公司当IT部门大佬的人”，“C语言优秀之处在于直接面向机器底层执行效率很高。”一些不懂的词汇了，在这个时候，众人都哄笑起来。</p>
+<br/>
+<p>在这些时候，我可以附和着笑，老板也是不会责备的。而且他见了网吧红人，也会每每这样问他，引人发笑。网吧红人自知不能和他们聊天，便只好对我说话，有一回对我说道：“听说你是计算机专业的吗？”我略略点一点头，他说:"既然是这样，我便考你一考。 HTML中的css怎么引入的?"我想，这人天天自带瓷碗吃老北京，而且这么简单的问题，也配来考我？便去看其他的电脑屏幕，不再理会他。网吧红人等了很久，很恳切的说到：“不知道吗？....我教给你，你是计算机专业的学生，不能就只做这样重启机器的网管，以后毕业了面试前端要用到的”；说着便打开记事本，在上面写了起来； 我暗想，离毕业还很远呢，再说就我这样技校的学生，出去大概也只能去电脑城给人装配电脑吧。我不耐烦了，懒懒的答道：谁要你教，不就是html标签后面跟style="属性内容吗"？网吧红人显出很高兴的样子,打开了编辑器的窗口,"对呀对呀,CSS还有其他2种引入的写法，你知道吗？"我更加不耐烦了，努着嘴走远。网吧红人刚开始敲键盘，见我毫不热心，便又叹一口气，显出极其惋惜的样子。</p>
+<br/>
+<p>有几次，网吧红人旁边玩DNF的小青年听见笑声，也来赶热闹，打趣他。网吧红人便给他讲一些，你现在玩游戏，有没有为以后考虑，要好好学习编程。小青年不屑一顾：“DNF里面的装备也是可以卖钱的，这你就不懂了吧，还是网吧红人呢！”“以后实在不行，我就去街上卖茶叶蛋，现在小生意也很挣钱，也不用混到在网吧吃泡面的地步。”我见到过很多次网吧红人这样碰了一鼻子灰。大家的也都跟着哄笑。</p>
+<br/>
+<p>
+	暑期已经是接近了尾声，同学们陆陆续续的都来到了学校，我去向老板申请离职手续。那是我最后一次去那家网吧，也是最后一次听到网吧红人的消息。他用C语言写了一些程序Demo，有一个朋友帮他投到了百度技术HR的邮箱里；听说已经拿到了offer去了京城就职。我脑海里浮现了他用瓷碗吃老北京的样子，恍如隔世。
+</p>
+<br/>
+<p>时间已是2018，再次见到网吧红人这个词汇，是在面筋哥的采访视频上面，不仅心生感慨，不知此时的网吧红人是否像他所说一样，已经成为了大公司的IT大佬。</p>
+<br/>
+<p>像新闻里所说的那样我国社会主要矛盾已经转化为人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾，早日解决这种矛盾。
+</p>
+<br/>
+<p>这大概是我们已经老去的90后一代，成长经历2008-2018，见证伟大祖国发展腾飞的一个过程吧，希望有机会可以到处走一走看一看，帮一帮那些遇上困难的人们。这就是网吧红人名称的由来吧.</p>
+<br/>
+<p id="fooot">时一八年五月十六日<br/>于深圳黑马</p>
+
+</div>
+	
+
+	<!--<div class="w zshFoot">-->
+		<!--<div class="zshMan">-->
+			<!--<div class="txt">项目红人</div>-->
+		<!--</div>-->
+		<!--<div class="zshType fl">-->
+			<!--<div class="first">-->
+			<!--<div class="zshone fl">模块1</div>-->
+			<!--<div class="zshtwo fl">模块2</div>-->
+			<!--<div class="zshthree fl">模块3</div>-->
+			<!--</div>-->
+			<!--<div class="last">-->
+			<!--<div class="zshFour fl">模块4</div>-->
+			<!--<div class="zshFive fl">模块5</div>-->
+			<!--<div class="zshSix fl">模块6</div>-->
+			<!--</div>-->
+
+			<!--<div class="arrow">-->
+				<!--<span class="arrow-left">&lt;</span>-->
+				<!--<span class="arrow-right">&gt;</span>-->
+			<!--</div>-->
+		<!--</div>-->
+	<!--</div>-->
+
+
+
+	<div class=" zshBottom">
+		<div class="w ">
+			<div class="zshh">
+			<div class="zshBtop">
+				<div class="zshLeft fl">
+					<img src="logow.png" alt="">
+					<img src="imgs/bottom.png" class="blo" alt="">
+				</div>
+
+				<div class="zshRight fr">
+					<p class="zp1">
+						<a href="#">关于我们</a>
+						<span>|</span>
+						<a href="#">加入我们</a>
+						<span>|</span>
+						<a href="#">合作申请</a>
+						<span>|</span>
+						<a href="#">意见反馈</a>
+					</p>
+					<p class="zp2">
+						<span>粤ICP备13006852号-3</span>&nbsp;&nbsp;
+						<span>粤B2-20180511</span>
+					</p>
+				</div>
+
+			</div>
+
+
+			<div class="zshLine">
+			</div>
+				<div class="zshTxt">
+					<p>
+					<a href="#">友情链接：</a>
+					<span>|</span>
+					<a href="#">传智播客</a>
+					<span>|</span>
+					<a href="#">黑马程序员</a>
+					<span>|</span>
+					<a href="#">传智专修学院</a>
+					<span>|</span>
+					<a href="#">深圳前端学院19期</a>
+					<span>|</span>
+					<a href="#">网吧红人项目组</a>
+					</p>
+
+					<span>&copy Internet Redman project @2018-5-16 好学网</span>
+				</div>
+			</div>
+
+
+			</div>
+		</div>
+	</div>
+
+
+	
+</body>
+<script>
+	
+</script>
+</html>

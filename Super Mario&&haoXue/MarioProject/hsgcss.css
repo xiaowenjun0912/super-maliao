@@ -1,0 +1,957 @@
+/*初始化代码*/
+*{padding:0;margin:0;}
+.test{position:relative;}
+ul{
+	list-style:none;
+}
+/*大盒子：必须设置属性为以下这些*/
+.wrapper{
+	position: relative;
+	max-width: 1920px;
+	min-width: 1024px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-top:1400px;/*测试用，可删*/
+}
+/*---------------------DIV：bigboxdh1---------------------------------------*/
+.bigboxdh1{
+	background:rgba(0, 0, 0, 0) url(img/bg_page-gray.png) repeat 0 0 fixed;
+	position: relative;
+	z-index: 10;
+	padding-bottom:300px;
+}
+	/*---------------------轮播动画以下-----------------------------------*/
+.bigboxdh1 .hsgbox{
+	position:absolute;
+    z-index: 2;
+    height: 650px;
+	/*解决倾斜后两边留白问题*/
+	transform:translate(-50%, 0) rotate(7deg);
+	left:50%;
+	width:150%;
+	margin-top:-9%;
+}
+.bigboxdh1 .hsgboxinner{
+	overflow: hidden;
+    position: relative;
+    z-index: 2;
+    height: 370px;
+}
+.bigboxdh1 .out{
+	position:absolute;
+	top:0;
+	width: 5256px;
+	width: 5256px;   
+	transition: transform 30s linear;
+}
+.bigboxdh1 .xieul{
+	float:left;
+}
+.bigboxdh1 .xieul li{
+	float:left;
+	width: 657px;
+	overflow:hidden;
+}
+	/*---------------------赛车动画以下-----------------------------------*/
+.bigboxdh1 .chara_dm3{
+  position: absolute;
+  top:-150px;
+  left: 0;
+  width: 100%;
+  height:150px;
+  /*animation:moverFirst 32s linear infinite;*/
+  transform:scaleX(-1);
+}
+.bigboxdh1 .dm_chara{
+		position:absolute;
+		bottom:0;
+		width: 120px;
+		height: 119px;
+		display: inline-block;
+		left:12%;
+		animation: jump 0.5s linear infinite;
+    }
+.bigboxdh1 .dm_chara span{
+	display: inline-block;
+	width: 100%;
+    height: 100%;
+	background: url("img/img_sfc-chara.png")no-repeat;
+}
+.bigboxdh1 .chara19 span { background-position: -480px -362px; }
+
+.bigboxdh1 .chara20 span { background-position: -360px -362px; }
+
+.bigboxdh1 .chara21 span { background-position: -480px -242px; }
+
+.bigboxdh1 .chara22 span { background-position: 0 -481px; }
+
+.bigboxdh1 .chara23 span { background-position: -240px -482px; }
+
+.bigboxdh1 .chara24 span { background-position: -480px -122px; }
+
+.bigboxdh1 .chara25 span { background-position: -480px -482px; }
+
+.bigboxdh1 .chara26 span { background-position: -360px -482px; }
+
+.bigboxdh1 .chara10 span { background-position: -120px -482px; }
+.bigboxdh1 .chara_dm3 .dm_chara{
+	animation:mover 32s linear infinite;
+}
+.bigboxdh1 .chara_dm3 .dm_chara:nth-child(1){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 2s !important;
+	animation-duration: 20s,.5s;
+}
+.bigboxdh1 .chara_dm3 .dm_chara:nth-child(2){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 0s !important;
+}
+.bigboxdh1 .chara_dm3 .dm_chara:nth-child(3){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 2s !important;
+}
+.bigboxdh1 .chara_dm3 .dm_chara:nth-child(4){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 10s !important;
+}
+.bigboxdh1 .chara_dm3 .dm_chara:nth-child(5){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 12s !important;
+	animation-duration: 25s,.5s;
+}
+.bigboxdh1 .chara_dm3 .dm_chara:nth-child(6){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 20s !important;
+}
+.bigboxdh1 .chara_dm3 .dm_chara:nth-child(7){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 5s !important;
+}
+.bigboxdh1 .chara_dm3 .dm_chara:nth-child(8){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 24s !important;
+}
+
+@keyframes moverFirst {
+	0% {
+		transform: translate(0, 0);
+	}
+	50.1% {
+		transform: translate(-100%, 0);
+	}
+	50.12% {
+		transform: translate(-100%, 100%);
+	}
+	50.13% {
+		transform: translate(100%, 100%);
+	}
+	50.14% {
+		transform: translate(100%, 0);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+@keyframes mover {
+  0% {
+	left: 100%;
+	bottom: 0;
+  }
+  99% {
+	left: -100%;
+	bottom: 0;
+  }
+  99.1% {
+	left: -100%;
+	bottom: -100%;
+  }
+  99.2% {
+	left: 100%;
+	bottom: -100%;
+  }
+  100% {
+	left: 100%;
+	bottom: 0;
+  }
+}
+@keyframes jump {
+  0% {
+	transform: translateY(3px);
+  }
+  50% {
+	transform: translateY(0);
+  }
+  100% {
+	transform: translateY(3px);
+  }
+}	
+
+	/*---------------------车淡入动画以下---------------------------------*/
+
+.bigboxdh1 .charabox_mover{
+	height: 730px;
+	position:relative;
+	width: 100%;
+	z-index: 10;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+.bigboxdh1 .charabox_mover .xhm{
+	position:absolute;
+	opacity: 0;
+}
+.bigboxdh1 .charabox_mover .xhm:first-child{
+	top:160px;
+	left: 0%;
+	margin-left: -633px;
+	transition:all .6s;
+	transition-delay:.6s;
+}
+.bigboxdh1 .charabox_mover .xhm:last-child{
+	left:50%;
+	transition:all .6s;
+	transition-delay:.2s;
+}
+.bigboxdh1 .charabox_mover .xhm.hm_chara1{
+	opacity: 1;
+	left:50%;
+}
+.bigboxdh1 .charabox_mover .hm_chara2{
+	opacity: 1;
+	margin-left: -139px;
+}
+
+.xhm_content{
+	
+}
+.xhm_content .inner{
+	max-width: 1024px;
+	margin: 0 auto;
+	position: relative;
+}
+.xhm_content .inner p{
+	opacity: 0;
+	transform: translate(-50px, 10px);
+	transition: all 0.6s;
+	transition-delay:.6s;	
+}
+.xhm_content .inner .xhm_text{
+	opacity: 1;
+	transform: translate(0px, 0px);
+}
+
+/*---------------------DIV：bigboxdh2---------------------------------------*/
+.bigboxdh2{
+	background:#000 url(img/bg_page-black.png) repeat 0 0 fixed;
+    position: relative;
+    z-index: 10;	
+}
+	/*---------------------轮播动画以下2-----------------------------------*/
+.bigboxdh2 .hsgbox{
+	position:absolute;
+    z-index: 2;
+    height: 650px;
+	/*解决倾斜后两边留白问题*/
+	transform:translate(-50%, 0) rotate(-7deg);
+	left:50%;
+	width:150%;
+	margin-top:-9%;
+}
+.bigboxdh2 .hsgboxinner{
+	overflow: hidden;
+    position: relative;
+    z-index: 2;
+    height: 370px;
+}
+.bigboxdh2 .out{
+	position:absolute;
+	top:0;
+	width: 5256px;
+	width: 5256px;   
+	transition: transform 30s linear;
+}
+.bigboxdh2 .xieul{
+	float:left;
+}
+.bigboxdh2 .xieul li{
+	float:left;
+	width: 657px;
+	overflow:hidden;
+}
+
+	/*---------------------赛车动画以下2-----------------------------------*/
+.bigboxdh2 .chara_dm3{
+  position: absolute;
+  top:-150px;
+  left: 0;
+  width: 100%;
+  height:150px;
+  /*animation:moverFirst 32s linear infinite;*/
+}
+.bigboxdh2 .dm_chara{
+		position:absolute;
+		bottom:0;
+		width: 120px;
+		height: 119px;
+		display: inline-block;
+		left:-12%;
+		animation: jump 0.5s linear infinite;
+    }
+.bigboxdh2 .dm_chara span{
+	display: inline-block;
+	width: 100%;
+    height: 100%;
+	background: url("img/img_sfc-chara.png")no-repeat;
+}
+.bigboxdh2 .chara19 span { background-position: -120px 0; }
+
+.bigboxdh2 .chara20 span { background-position: 0 0; }
+
+.bigboxdh2 .chara21 span { background-position: -360px 0; }
+
+.bigboxdh2 .chara22 span { background-position: -360px -241px; }
+
+.bigboxdh2 .chara23 span { background-position: -360px -122px; }
+
+.bigboxdh2 .chara24 span { background-position: -240px 0; }
+
+.bigboxdh2 .chara25 span { background-position: -0px -122px; }
+
+.bigboxdh2 .chara26 span { background-position: -120px -242px; }
+
+.bigboxdh2 .chara10 span { background-position: -120px -122px; }
+.bigboxdh2 .chara_dm3 .dm_chara{
+	animation:mover 32s linear infinite;
+}
+.bigboxdh2 .chara_dm3 .dm_chara:nth-child(1){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 2s !important;
+	animation-duration: 20s,.5s;
+}
+.bigboxdh2 .chara_dm3 .dm_chara:nth-child(2){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 0s !important;
+}
+.bigboxdh2 .chara_dm3 .dm_chara:nth-child(3){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 2s !important;
+}
+.bigboxdh2 .chara_dm3 .dm_chara:nth-child(4){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 10s !important;
+}
+.bigboxdh2 .chara_dm3 .dm_chara:nth-child(5){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 12s !important;
+	animation-duration: 25s,.5s;
+}
+.bigboxdh2 .chara_dm3 .dm_chara:nth-child(6){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 20s !important;
+}
+.bigboxdh2 .chara_dm3 .dm_chara:nth-child(7){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 5s !important;
+}
+.bigboxdh2 .chara_dm3 .dm_chara:nth-child(8){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 24s !important;
+}
+
+@keyframes moverFirst {
+	0% {
+		transform: translate(0, 0);
+	}
+	50.1% {
+		transform: translate(-100%, 0);
+	}
+	50.12% {
+		transform: translate(-100%, 100%);
+	}
+	50.13% {
+		transform: translate(100%, 100%);
+	}
+	50.14% {
+		transform: translate(100%, 0);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+@keyframes mover {
+  0% {
+	left: 100%;
+	bottom: 0;
+  }
+  99% {
+	left: -100%;
+	bottom: 0;
+  }
+  99.1% {
+	left: -100%;
+	bottom: -100%;
+  }
+  99.2% {
+	left: 100%;
+	bottom: -100%;
+  }
+  100% {
+	left: 100%;
+	bottom: 0;
+  }
+}
+@keyframes jump {
+  0% {
+	transform: translateY(3px);
+  }
+  50% {
+	transform: translateY(0);
+  }
+  100% {
+	transform: translateY(3px);
+  }
+}
+	
+	
+	/*---------------------车淡入动画以下2---------------------------------*/
+.bigboxdh2 .charabox_mover{
+	height: 730px;
+	position:relative;
+	width: 100%;
+	z-index: 10;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+.bigboxdh2 .charabox_mover .xhm{
+	position:absolute;
+	top: -130px;
+	right: -360px;
+	opacity: 0;
+	transform: translate(100px, -30px);
+	transition: all 0.6s;
+	transition-delay:.6s;
+}
+.bigboxdh2 .charabox_mover .xhm::before{
+	background: url(img/img_link-cup.png) no-repeat 0 0;
+	content: '';
+	display: block;
+	width: 462px;
+	height: 462px;
+	position: absolute;
+	top: 110px;
+	left: 430px;
+	z-index: -1;
+	animation: rotation 30s linear infinite;
+}
+.bigboxdh2 .charabox_mover .xhm.hm_chara3{
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+/*---------------------DIV：bigboxdh3---------------------------------------*/
+.bigboxdh3{
+	background:rgba(0, 0, 0, 0) url(img/bg_page-gray.png) repeat 0 0 fixed;
+	position: relative;
+	z-index: 10;
+}
+	/*---------------------轮播动画以下3-----------------------------------*/
+.bigboxdh3 .hsgbox{
+	position:absolute;
+    z-index: 2;
+    height: 650px;
+	/*解决倾斜后两边留白问题*/
+	transform:translate(-50%, 0) rotate(7deg);
+	left:50%;
+	width:150%;
+	margin-top:-9%;
+}
+.bigboxdh3 .hsgboxinner{
+	overflow: hidden;
+    position: relative;
+    z-index: 2;
+    height: 370px;
+}
+.bigboxdh3 .out{
+	position:absolute;
+	top:0;
+	width: 5256px;
+	width: 5256px;   
+	transition: transform 30s linear;
+}
+.bigboxdh3 .xieul{
+	float:left;
+}
+.bigboxdh3 .xieul li{
+	float:left;
+	width: 657px;
+	overflow:hidden;
+}	
+	/*---------------------赛车动画以下3-----------------------------------*/
+.bigboxdh3 .chara_dm3{
+  position: absolute;
+  top:-150px;
+  left: 0;
+  width: 100%;
+  height:150px;
+  /*animation:moverFirst 32s linear infinite;*/
+  transform:scaleX(-1);
+}
+.dm_chara{
+		position:absolute;
+		bottom:0;
+		width: 120px;
+		height: 119px;
+		display: inline-block;
+		left:12%;
+		animation: jump 0.5s linear infinite;
+    }
+.dm_chara span{
+	display: inline-block;
+	width: 100%;
+    height: 100%;
+	background: url("img/img_sfc-chara.png")no-repeat;
+}
+.chara19 span { background-position: -120px 0; }
+
+.chara20 span { background-position: 0 0; }
+
+.chara21 span { background-position: -360px 0; }
+
+.chara22 span { background-position: -360px -241px; }
+
+.chara23 span { background-position: -360px -122px; }
+
+.chara24 span { background-position: -240px 0; }
+
+.chara25 span { background-position: -0px -122px; }
+
+.chara26 span { background-position: -120px -242px; }
+
+.chara10 span { background-position: -120px -122px; }
+.chara_dm3 .dm_chara{
+	animation:mover 32s linear infinite;
+}
+.chara_dm3 .dm_chara:nth-child(1){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 2s !important;
+	animation-duration: 20s,.5s;
+}
+.chara_dm3 .dm_chara:nth-child(2){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 0s !important;
+}
+.chara_dm3 .dm_chara:nth-child(3){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 2s !important;
+}
+.chara_dm3 .dm_chara:nth-child(4){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 10s !important;
+}
+.chara_dm3 .dm_chara:nth-child(5){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 12s !important;
+	animation-duration: 25s,.5s;
+}
+.chara_dm3 .dm_chara:nth-child(6){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 20s !important;
+}
+.chara_dm3 .dm_chara:nth-child(7){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 5s !important;
+}
+.chara_dm3 .dm_chara:nth-child(8){
+	animation:mover 32s linear infinite,jump 0.5s linear infinite;
+	animation-delay: 24s !important;
+}
+
+@keyframes moverFirst {
+	0% {
+		transform: translate(0, 0);
+	}
+	50.1% {
+		transform: translate(-100%, 0);
+	}
+	50.12% {
+		transform: translate(-100%, 100%);
+	}
+	50.13% {
+		transform: translate(100%, 100%);
+	}
+	50.14% {
+		transform: translate(100%, 0);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+@keyframes mover {
+  0% {
+	left: 100%;
+	bottom: 0;
+  }
+  99% {
+	left: -100%;
+	bottom: 0;
+  }
+  99.1% {
+	left: -100%;
+	bottom: -100%;
+  }
+  99.2% {
+	left: 100%;
+	bottom: -100%;
+  }
+  100% {
+	left: 100%;
+	bottom: 0;
+  }
+}
+@keyframes jump {
+  0% {
+	transform: translateY(3px);
+  }
+  50% {
+	transform: translateY(0);
+  }
+  100% {
+	transform: translateY(3px);
+  }
+}	
+	/*---------------------车淡入动画以下3---------------------------------*/
+.bigboxdh3 .charabox_mover{
+	height: 508px;
+	position:relative;
+	width: 100%;
+	z-index: 10;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+.bigboxdh3 .charabox_mover .xhm{
+	position:absolute;
+	top: -70px;
+	right: 50%;
+	opacity: 0;
+	transform: translate(-100px, -30px);
+	transition: all 0.6s;
+	transition-delay:.6s;
+}
+.bigboxdh3 .charabox_mover .xhm::before{
+	background: url(img/img_shizue-cup.png) no-repeat 0 0;
+	content: '';
+	display: block;
+	width: 462px;
+	height: 462px;
+	position: absolute;
+	top: 65px;
+	left: -120px;
+	z-index: -1;
+	animation: rotation 30s linear infinite;
+}
+.bigboxdh3 .charabox_mover .xhm.hm_chara4{
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}	
+	
+	
+/*---------------------DIV：bigboxdh4---------------------------------------*/
+.bigboxdh4{
+	background:#000 url(img/bg_page-illust.jpg) repeat 0 0 fixed;
+    position: relative;
+    z-index: 10;	
+	padding-bottom:300px;
+}
+	/*---------------------轮播动画以下4-----------------------------------*/
+.bigboxdh4 .hsgbox{
+	position:absolute;
+    z-index: 2;
+    height: 650px;
+	/*解决倾斜后两边留白问题*/
+	transform:translate(-50%, 0) rotate(-7deg);
+	left:50%;
+	width:150%;
+	margin-top: -9%;
+}
+.bigboxdh4 .hsgboxinner{
+	overflow: hidden;
+    position: relative;
+    z-index: 2;
+    height: 370px;
+}
+.bigboxdh4 .out{
+	position:absolute;
+	top:0;
+	width: 5256px;
+	width: 5256px;   
+	transition: transform 30s linear;
+}
+.bigboxdh4 .xieul{
+	float:left;
+}
+.bigboxdh4 .xieul li{
+	float:left;
+	width: 657px;
+	overflow:hidden;
+}
+	/*---------------------赛车动画以下4-----------------------------------*/
+.bigboxdh4 .chara_dm3{
+  position: absolute;
+  top:-150px;
+  left: 0;
+  width: 100%;
+  height:150px;
+  /*animation:moverFirst 32s linear infinite;*/
+}
+.bigboxdh4 .dm_chara{
+		position:absolute;
+		bottom:0;
+		width: 120px;
+		height: 119px;
+		display: inline-block;
+		left:12%;
+		animation: jump 0.5s linear infinite;
+    }
+.bigboxdh4 .chara19 span { background-position: -120px 0; }
+
+.bigboxdh4 .chara20 span { background-position: 0 0; }
+
+.bigboxdh4 .chara21 span { background-position: -360px 0; }
+
+.bigboxdh4 .chara22 span { background-position: -360px -241px; }
+
+.bigboxdh4 .chara23 span { background-position: -360px -122px; }
+
+.bigboxdh4 .chara24 span { background-position: -240px 0; }
+
+.bigboxdh4 .chara25 span { background-position: -0px -122px; }
+
+.bigboxdh4 .chara26 span { background-position: -120px -242px; }
+
+.bigboxdh4 .chara10 span { background-position: -120px -122px; }
+
+
+
+
+	/*---------------------车淡入动画以下4---------------------------------*/
+.bigboxdh4{
+
+}
+.bigboxdh4 .charabox_mover{
+	height: 530px;
+	position:relative;
+	width: 100%;
+	z-index: 10;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+.bigboxdh4 .charabox_mover .xhm{
+	position:absolute;
+	bottom: 0;
+	left: 50%;
+	top:0px;
+	margin-left: 50px;
+	opacity: 0;
+	transform: translate(100px, -30px);
+	transition: all 0.6s;
+	transition-delay:.6s;
+}
+.bigboxdh4 .charabox_mover .xhm::before{
+	background: url(img/img_link-cup.png) no-repeat 0 0;
+	content: '';
+	display: block;
+	width: 462px;
+	height: 462px;
+	position: absolute;
+	top: 8px;
+	right: -180px;
+	z-index: -1;
+	animation: rotation 30s linear infinite;
+}
+.bigboxdh4 .charabox_mover .xhm.hm_chara5{
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/*---------------------DIV：bigboxdh5---------------------------------------*/
+.bigboxdh5{
+	background:rgba(0, 0, 0, 0) url(img/bg_page-illust2.jpg) repeat 0 0 fixed;
+	position: relative;
+	z-index: 10;
+}
+	/*---------------------轮播动画以下5-----------------------------------*/
+.bigboxdh5 .hsgbox{
+	position:absolute;
+    z-index: 2;
+    height: 650px;
+	/*解决倾斜后两边留白问题*/
+	transform:translate(-50%, 0) rotate(7deg);
+	left:50%;
+	width:150%;
+	margin-top:-9%;
+}
+.bigboxdh5 .hsgboxinner{
+	overflow: hidden;
+    position: relative;
+    z-index: 2;
+    height: 370px;
+}
+.bigboxdh5 .out{
+	position:absolute;
+	top:0;
+	width: 5256px;
+	width: 5256px;   
+	transition: transform 30s linear;
+}
+.bigboxdh5 .xieul{
+	float:left;
+}
+.bigboxdh5 .xieul li{
+	float:left;
+	width: 657px;
+	overflow:hidden;
+}
+
+
+	/*---------------------赛车动画以下5-----------------------------------*/
+.bigboxdh5 .chara_dm3{
+  position: absolute;
+  top:-150px;
+  left: 0;
+  width: 100%;
+  height:150px;
+  /*animation:moverFirst 32s linear infinite;*/
+  transform:scaleX(-1);
+}
+.bigboxdh5 .chara19 span { background-position: -120px 0; }
+
+.bigboxdh5 .chara20 span { background-position: 0 0; }
+
+.bigboxdh5 .chara21 span { background-position: -360px 0; }
+
+.bigboxdh5 .chara22 span { background-position: -360px -241px; }
+
+.bigboxdh5 .chara23 span { background-position: -360px -122px; }
+
+.bigboxdh5 .chara24 span { background-position: -240px 0; }
+
+.bigboxdh5 .chara25 span { background-position: -0px -122px; }
+
+.bigboxdh5 .chara26 span { background-position: -120px -242px; }
+
+.bigboxdh5 .chara10 span { background-position: -120px -122px; }	
+	
+	/*---------------------车淡入动画以下5---------------------------------*/
+.bigboxdh5 .charabox_mover{
+	height: 450px;
+	position:relative;
+	width: 100%;
+	z-index: 10;
+	max-width: 1280px;
+	margin: 0 auto;
+	margin-bottom: 25px;
+}
+.bigboxdh5 .charabox_mover .xhm:first-child{
+	position:absolute;
+	bottom: 0;
+	left: 25px;
+	z-index: 10;
+	opacity: 0;
+	transform: translate(100px, -50px);
+	transition: all 0.4s;
+	transition-delay:.4s;
+}
+.bigboxdh5 .charabox_mover .xhm:first-child::before{
+	background: url(img/img_baby-mario-cup.png) no-repeat 0 0;
+	content: '';
+	display: block;
+	width: 462px;
+	height: 462px;
+	position: absolute;
+	top: -45px;
+	left: -190px;
+	z-index: -1;
+	animation: rotation 30s linear infinite;
+}
+.bigboxdh5 .charabox_mover .xhm:last-child{
+	position:absolute;
+	left: 416px;
+	bottom: 75px;
+	z-index: 10;
+	opacity: 0;
+	transform: translate(100px, -50px);
+	transition: all 0.4s;
+	transition-delay:.6s;
+}
+.bigboxdh5 .charabox_mover .xhm:first-child.hm_chara6{
+	opacity: 1;
+	transform: translate(0,0);
+}
+.bigboxdh5 .charabox_mover .xhm:last-child.hm_chara6{
+	opacity: 1;
+	transform: translate(0,0);
+}
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+#bigboxdh1 .dm_chara span:hover{
+	animation: dian_jump 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#bigboxdh2 .dm_chara span:hover{
+	animation: dian_jump 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#bigboxdh3 .dm_chara span:hover{
+	animation: dian_jump 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#bigboxdh4 .dm_chara span:hover{
+	animation: dian_jump 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#bigboxdh5 .dm_chara span:hover{
+	animation: dian_jump 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes dian_jump{
+	0% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	50% {
+		-webkit-transform: translateY(-30px);
+		transform: translateY(-30px);
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}

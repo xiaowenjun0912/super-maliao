@@ -1,0 +1,154 @@
+*{
+  margin:0px;
+  padding:0px;
+  list-style: none;
+}
+#h_xConter{
+  height: 2450px;
+  width: 100%;
+  padding: 50px 0 450px 0;
+  background: url("mario/bg_page-gray.png") repeat rgba(0,0,0,0.5);
+  margin:0 auto;
+
+
+}
+.h_xinner{
+  height: 2494px;
+  width: 1024px;
+  margin: 0 auto;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.h_xinner img{
+  line-height: 100%;
+  vertical-align: bottom;
+}
+.h_xlogo{
+  position: absolute;
+  top:-35px;
+  right: 0px;
+}
+.h_xmap{
+  height:1794px;
+  width:1024px;
+  margin-top: 90px;
+}
+.h_xmap dl{
+  height: 122px;
+  width: 1024px;
+  margin-top: 30px;
+
+
+}
+.h_xmap .h_xlg1{
+  text-indent: -100000px;
+  width: 106px;
+  height: 123px;
+  background: url("mario/img_cup-sprite.png") no-repeat;
+}
+.h_xmap1{
+  margin: -123px 0 0 126px;
+  overflow: hidden;
+}
+.h_xmap1 ul li{
+  float: left;
+ padding-left:7px;
+}
+
+
+.h_xmap .h_xlg2{
+  text-indent: -100000px;
+  width: 106px;
+  height: 123px;
+  background: url("mario/img_cup-sprite.png") no-repeat  -105px 0px;
+}
+.h_xmap .h_xlg3{
+  text-indent: -100000px;
+  width: 106px;
+  height: 123px;
+  background: url("mario/img_cup-sprite.png") no-repeat  -212px 0px;
+}
+.h_xmap .h_xlg4{
+  text-indent: -100000px;
+  width: 106px;
+  height: 123px;
+  background: url("mario/img_cup-sprite.png") no-repeat  -318px 0px;
+}
+.h_xmap .h_xlg5{
+  text-indent: -100000px;
+  width: 106px;
+  height: 123px;
+  background: url("mario/img_cup-sprite.png") no-repeat  0px -123px;
+}
+.h_xmap .h_xlg6{
+  text-indent: -100000px;
+  width: 106px;
+  height: 123px;
+  background: url("mario/img_cup-sprite.png") no-repeat  -105px -123px;
+}
+.h_xmap .h_xlg7{
+  text-indent: -100000px;
+  width: 106px;
+  height: 123px;
+  background: url("mario/img_cup-sprite.png") no-repeat  -212px -123px;
+}
+.h_xmap .h_xlg8{
+  text-indent: -100000px;
+  width: 106px;
+  height: 123px;
+  background: url("mario/img_cup-sprite.png") no-repeat  -318px -123px;
+}
+.h_xmap .h_xlg9{
+  text-indent: -100000px;
+  width: 106px;
+  height: 123px;
+  background: url("mario/img_cup-sprite.png") no-repeat  0px -246px;
+}
+.h_xmap .h_xlg10{
+  text-indent: -100000px;
+  width: 106px;
+  height: 123px;
+  background: url("mario/img_cup-sprite.png") no-repeat  -105px -246px;
+}
+.h_xmap .h_xlg11{
+  text-indent: -100000px;
+  width: 106px;
+  height: 123px;
+  background: url("mario/img_cup-sprite.png") no-repeat  -212px -246px;
+}
+.h_xmap .h_xlg12{
+  text-indent: -100000px;
+  width: 106px;
+  height: 123px;
+  background: url("mario/img_cup-sprite.png") no-repeat  -318px -246px;
+}
+.h_xfoot{
+  height: 439px;
+  width: 1024px;
+  margin-top: 90px;
+}
+.h_xfoot .left{
+  height: 439px;
+  width: 506px;
+  float: left;
+}
+.h_xfoot .right{
+  height: 439px;
+  width: 506px;
+  float: right;
+  position: relative;
+}
+.h_xfoot .right .h_xend2{
+  position: absolute;
+  top: 150px;
+  right: -20px;
+}
+
+
+
+
+
+
+
+

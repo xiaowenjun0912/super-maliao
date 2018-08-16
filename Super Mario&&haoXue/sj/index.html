@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <!--  <meta http-equiv="refresh" content="1s" url=http://192.168.69.188/MarioProject>-->
+    <title>超級瑪麗8賽車豪華版商健榮譽製作</title>
+    <link rel="stylesheet" href="marioMask.css">
+</head>
+<body>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    setTimeout('window.location="http://192.168.69.188/MarioProject"',10000)
+    //loading条变速增宽度；
+$(function(){
+    var $p1=$("#p1");
+    var $p3=$("#p3");
+    var $img=$('#img');
+    var $qizi=$("#qizi")[0];
+    var $cai=$("#cai")[0];
+    var $jump=$("#jump")[0];
+    setTimeout(
+        function(){
+            $qizi.play();
+        },2500)
+    setTimeout(
+        function(){
+            $cai.play();
+        },3500)
+    setTimeout(
+        function(){
+            $img.css({
+                transform: 'rotate(0deg)'
+            })
+        }
+        ,4650)
+ setTimeout(
+     function(){
+         $p1.css({
+             bottom:180,
+         right:80
+         })
+     }
+ ,7000)
+    setTimeout(
+        function(){
+            $p3.css({
+                left:120,
+            bottom: 240
+            })
+        }
+        ,3000)
+    $(" #loadingBar").animate(
+        {
+            width:176
+        },10000,'swing'
+        )
+    //设置单个小车从左到右出发；
+    var num=-1;
+    var obj={
+        1:"-120px 0",
+        2:"-120px -362px",
+        3:"-360px 0",
+        4:"-360px -241px",
+        5:"-360px -122px",
+        6:"-240px 0",
+        7:"-0px -122px",
+        8:"-120px -122px",
+        9:"-120px -242px",
+        10:"0 -242px",
+        11:"-240px -242px",
+        12:"-240px -122px",
+        13:"-240px -360px",
+        14:"0 -360px",
+        15:"-480px 0",
+        16:"-360px -122px",
+        17:"-240px 0",
+        18:"-0px -122px",
+        19:"-240px -242px",
+        20:"-240px -122px",
+        21:"-240px -360px",
+        22:"0 -360px",
+        23:"-480px 0",
+    }
+  setInterval(function(){
+      num++;
+      var $run = '<div id="run"  index="'+num+'"></div>';
+      $('.runAll').append($run);
+              $('.runAll #run').eq(num).css({
+                  'background-position':obj[num]
+              });
+      //.小车跳动
+      $('body').on('mouseenter','.runAll div',function () {
+          $(this).css({
+              'animation':'onclick 0.5s linear'
+          });
+          $jump.play();
+      });
+         $('.runAll #run').eq(num).animate({
+          'left':-120
+      },5000,'linear')
+  },700);
+})
+</script>
+<div id="bg">
+    <audio src="bgMusic.mp3" autoplay loop></audio>
+    <audio src="qizi.mp3" id="qizi" ></audio>
+    <audio src="caidiren.mp3" id="cai" ></audio>
+    <audio src="Jump.mp3" id="jump" ></audio>
+    <div>
+        <img src="img_girl_副本.png"  alt="" id="p1">
+    </div>
+    <div>
+        <img src="img_koopa.png" width="" id="p2">
+    </div>
+    <div>
+        <img src="img_mario.png" width="379.5px" height="282px" alt="" id="p3">
+    </div>
+    <div>
+        <img src="guike.png"  alt="" id="p4">
+    </div>
+    <div id="logo">
+        <img src="logo.png" alt="#" id="img">
+    </div>
+    <div id="loadingBarSet">
+        <p>
+            <img src="txt_loading.png" >
+        </p>
+        <div id="loadingBarMask">
+            <div id="loadingBar">
+            </div>
+        </div>
+    </div>
+ <div id="bottom">
+ </div>
+    <div class="runAll">
+    </div>
+</div>
+<div class="box">
+</div>
+</body>
+</html>

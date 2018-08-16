@@ -1,0 +1,108 @@
+     body,div,h1,ul,li,a,p,img{
+            margin:0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .bContent{
+		   position: relative;
+           background-image: url("../img/bg_page-illust2.jpg");
+        }
+        #WT{
+            width: 506px;
+            margin:0 auto;
+            animation-name: wt;
+            animation-duration: 500ms;
+            /* opacity:0.1; */
+        }
+        @keyframes wt{
+	        0%   {width: 1px; opacity: 0.1;}
+	        25%  {width: 100px; opacity: 0.3;}
+	        50%  {width: 200px; opacity: 0.5;}
+	        75%  {width: 300px; opacity: 0.7;}
+	        100% {width: 506px; opacity: 1;}
+            }
+
+        #lb{
+            margin-top:40px;
+            width: 100%;
+            height: 450px;
+            cursor:Default;
+            position: relative;
+            left:0%;
+            bottom: 0%;
+            overflow: hidden;
+            /* margin-left:50px; */
+        }
+
+        #lb ul{
+            width:6800px;
+            position:absolute;
+            /* margin-left:-50px; */
+            left:0;
+            top:0;
+        }
+
+        #lb ul li{
+            float:left;
+            width: 400px;
+            transition: width 0.4s ease-in-out;
+        }
+        #lb ul li:hover{
+            transition: width 0.4s ease-in-out, z-index 0.4s step-start;
+            z-index: 10;
+             width: 700px !important;
+
+            }
+
+
+        #lb ul li span{
+            width: 400px;
+            display: block;
+            height: 450px;
+            transform:skew(-10deg) translateX(-50%);
+            transition: width 0.4s ease-in-out;
+            overflow: hidden;
+            position:relative;
+            left:50%;
+            top:0;
+
+        }
+         #lb ul li:hover span{
+            width: 700px;
+            transition: width 0.4s ease-in-out;
+        }
+
+         #lb ul li span img{
+            display: block;
+            transform:skew(12deg) translateX(-11%);
+            position: absolute;
+            top:0;
+            left:0;
+         }
+        /*<---------------------------------------------------------->*/
+
+        .footer-lrtClass{
+            height: 30px;
+            background-color: red;
+            position:relative;
+            left:0px;
+            right:0px;
+        }
+        .footer-lrtClass a,.footer-lrtClass p{
+            text-decoration: none;
+            color:white;
+            font: normal 400 12px "Microsoft Yahei";
+            text-align: center;
+            line-height: 30px;
+            margin:0 10px 0 10px;
+        }
+        .footer-lrtClass a:hover{
+            color:#cccccc;
+        }
+        .footer-lrtClass p{
+            position:absolute;
+            top:0px;
+            right:0px;
+        }

@@ -1,0 +1,251 @@
+/*下面这是给body清除默认样式，并设置高*/
+body{
+    margin: 0;
+height: 2000px;
+}
+/*这是给全局清除默认样式*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.windowHeight{
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* position: relative; */
+    max-width: 1920px;
+    min-width: 1024px;	
+	margin:0 auto;
+}
+
+/*show是整个首页的背景图，并给他一个背景图片、定位*/
+.show{
+    width:100%;
+    height:100%;
+    background: url("zyfimage/bg_mv(2).jpg")center bottom no-repeat ;
+    background-size:cover;
+    position: absolute;
+	top:40px;
+	bottom:0;
+}
+/*xiaoHuangR是小图左上角那个钓鱼的小黄人*/
+.xiaoHuangR{
+    position: absolute;
+    top: 46px;
+    left: 109px;
+
+}
+/*彩虹桥上三小人*/
+.sanxiaoR{
+    position: absolute;
+    top: -69px;
+    left: 472px;
+}
+/*马里奥版本8的logo*/
+.mliaologo{
+    position: absolute;
+    top: 223px;
+    left: 39px;
+}
+/*马里奥上边的黄头发姑娘*/
+.huang-gu-niang{
+    position: absolute;
+    top: -10px;
+    left: 895px;
+}
+/*红色马里奥要用绝对定位，后面所有的小图也都要改为absolute*/
+.hong-maliao{
+    position: absolute;
+    top: 52px;
+    left: 726px;
+    z-index: 2;
+    /*z-indx就是属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。*/
+}
+/*这是给中间红色马里奥设置的不透明度*/
+#red {
+    opacity: 0.6;
+}
+/*马里奥左边的小红帽*/
+.xiao-Hongmao{
+    position: absolute;
+    top: 260px;
+    left: 630px;
+}
+/*左下角发售盒装版中的大盒子div，并设置模糊程度*/
+.fashou{
+    width:352px;
+    height:155px;
+    border-radius:10px;
+    background: rgba(0,0,0,.6);
+    position: absolute;
+    top: 453px;
+    left: 33px;
+}
+/*左下角发售盒子装的左边小图*/
+.fashou-left{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-68%,-50%);
+}
+/*给发售img设置隐藏*/
+.fashou-left img{
+    display: block;
+}
+
+/*左下角发售盒子里右边的飞车*/
+.fashou-right-t{
+    position: absolute;
+    top: 8px;
+    right: 10px;
+}
+/*发售飞车动画里面的播放按钮*/
+.fashou-right-Bofang{
+    position:absolute;
+    top: 23px;
+    left: 267px;
+}
+/*左下角发售盒子里顶部的logo*/
+.fashou-right-bottom{
+    position: absolute;
+    top: 105px;
+    left: 237px;
+}
+/*以下设置通栏的样式、定位*/
+.tong-lan{
+    height: 40px;
+    width: 100%;
+    background: white;
+    position: relative;
+    top: 0;
+    z-index: auto;
+    text-align: center;
+    /*vertical-align: middle;*/
+}
+/*以下点出通栏中间的图片并设置定位局中，相对定位*/
+.tong-lan img{
+    position: relative;
+    top: 10px;;
+}
+/*以下是红色logo*/
+.red-logo{
+    position: absolute;
+    top: 40px ;
+    right: 0;
+}
+/*以下为scroll卷轴字母*/
+.SCRoll{
+    position: absolute;
+    bottom:30px;
+    left: 50%;
+    margin-left: -25px;
+}
+/*下面是箭头*/
+.jianTou{
+    position: absolute;
+    top: 10px;
+    left: 0px;
+}
+/*下面是为播放按钮设置设置鼠标点击点击动画*/
+#play {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+/*播放鼠标悬停*/
+#play:hover {
+    transform: scale(1.3);
+}
+/*给中间播放的按钮设置动画并用到子绝父相*/
+#img123 {
+    animation: donghuang1 1.5s linear infinite;/*1.5秒时长做完*/
+    position: relative;/*子绝父相and绝对定位*/
+    /*bottom:-10px*/
+}
+/*声明动画标签*/
+@keyframes donghuang1 {
+    0%{
+        bottom:-10px;
+    }
+
+    50%{
+        bottom:-25px;
+    }
+    /*75%{*/
+        /*bottom:-20px;*/
+    /*}*/
+    100%{
+        bottom:-10px;
+    }
+}
+/*右边导航条*/
+#D-hangtiao{
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    z-index: 10;
+}
+#D-hangtiao  ul{
+}
+#D-hangtiao  ul li{
+    list-style: none;
+    margin-bottom: 20px;
+    width: 11px;
+    height: 11px;
+    margin-bottom: 20px;
+    background-color: white;
+    /*position: absolute;*/
+}
+/*li标签hover事件 给a设置显示 改为js事件*/
+#D-hangtiao ul li:hover a{
+    display: block;
+}
+/*给a标签设置样式*/
+#D-hangtiao ul li a{
+    /*清除a默认样式*/
+    text-decoration: none;
+    /*文本颜色*/
+    color: #fff;
+    /*隐藏*/
+    display: none;
+    /*宽高*/
+    height: 20px;
+    width: 70px;
+    line-height: 20px;
+    background-color: rgba(0,0,0,0.8);
+    text-align: center;
+    font-size: 10px;
+    position: absolute;
+    top:-4px;
+    right: 20px;
+}
+/*给导航栏里所有的a添加伪元素*/
+#D-hangtiao ul li a::after{
+    content: "";
+    /*display：black 转换为块级元素*/
+    display: block;
+    height: 0;
+    width: 0;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgba(0,0,0,.8);
+    /*以上设置为伪类三角*/
+    position: absolute;
+    right: -10px;
+    top:5px;
+}
+/*给不同li里的a不同的top定位*/
+#D-hangtiao ul li:nth-child(2) a{
+    top:27px;
+}
+#D-hangtiao ul li:nth-child(3) a{
+    top:58px;
+}
+#D-hangtiao ul li:nth-child(4) a{
+    top:89px;
+}
+#D-hangtiao ul li:nth-child(5) a{
+    top:120px;
+}

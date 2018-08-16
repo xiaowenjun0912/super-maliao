@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>好学网-优秀项目分享学习平台</title>
+	
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/zshStyle.css">
+	<link rel="stylesheet" href="css/home.css">
+
+
+	<script src="js/jquery-1.12.4.js"></script>
+	<script src="js/home.js"></script>
+
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<script>
+	  $(function () {
+	    var $cleft = $(".class-l");
+	    var $cright = $(".class-r");
+
+
+	    $cleft.mouseenter(function (){
+          $(".class-l div").css({
+			"display" : "block",
+            "opacity" : 0.7,
+			"z-index":1
+		  });
+        });
+        $cleft.mouseleave(function (){
+          $(".class-l div").hide(500);
+        });
+
+        $cright.mouseenter(function (){
+          $(".class-r div").css({
+            "display" : "block",
+            "opacity" : 0.7,
+            "z-index":1
+          });
+        });
+        $cright.mouseleave(function () {
+        	$(".class-r div").hide(500);
+        });
+
+
+        var $video = $('.video');
+
+        // var getRandomColor = function () {
+        //   /*0-255*/
+        //   var r = Math.floor(256 * Math.random());
+        //   var g = Math.floor(256 * Math.random());
+        //   var b = Math.floor(256 * Math.random());
+        //   return 'rgb(' + r + ',' + g + ',' + b + ')';
+        // }
+
+        var getRandomTop = function () {
+          /*height() jquery方法  0-视频高度 */
+          var videoHeight = $video.height();
+          return videoHeight * Math.random();
+        }
+
+        /*点击发送*/
+        $('[type="button"]').click(function () {
+          /*val() jquery方法 获取文本输入框的值*/
+          //var text = $('[type="text"]').val().trim();
+          /* jquery 工具函数  */
+          var text = $.trim($('[type="text"]').val());
+
+          /*没有输入内容就停止执行*/
+          if (!text) return false;
+          /*弹幕*/
+          $('<span></span>').text(text).css({
+            'position':'absolute',
+            'width':200,
+            'height':30,
+            'font-size':'20px',
+            'font-weight':'bold',
+            'right':-200,
+            'color':"white",
+            'top':getRandomTop()
+          }).animate({'right':1000},10000,'linear',function () {
+            /*动画结束之后需要删除  自杀*/
+            $(this).remove();
+          }).appendTo($video);
+          /*清空输入框*/
+          $('[type="text"]').val('');
+        });
+        /*回车发送*/
+        $('[type="text"]').keyup(function (event) {
+          //console.log(event.keyCode);
+          if(event.keyCode == 13){
+            /*触发点击事件  执行发射操作*/
+            $('[type="button"]').click();
+          }
+        });
+
+
+      // var $boxType = $(".zshType");
+        // $boxType.mouseenter(function (){
+        // 	$(".arrow").show();
+        // });
+        //
+        // var num = 0;
+        // $(".arrow-right").click(function (){
+        //   num++;
+			// $(".last").fadeIn();
+			// $(".first").fadeOut();
+			// if(num > 1){
+        //       $(".first").fadeIn(500);
+        //       $(".last").fadeOut(500);
+			// }
+        // });
+        //
+        // $(".arrow-left").click(function (){
+        //   $(".first").fadeIn();
+        //   $(".last").fadeOut();
+        //   if(num > 1){
+        //     $(".last").fadeIn();
+        //     $(".first").fadeOut();
+		 //  }
+        // });
+
+	  });
+	</script>
+</head>
+<body>
+	<div id="header">
+		<div id="logo">
+		<h1>
+			<a href="#"><img src="imgs/logow.png" alt=""></a>
+			<img src="imgs/top.png" class="lo" alt="" >
+		</h1>
+		<ul id="headerright">
+			<li><a href="index.html">首页</a></li>
+			<li><a href="javascript:void(0)">项目中心</a></li>
+			<li><a href="guanyu.html">关于我们</a></li>
+			<li><a href="http://192.168.69.188/bbs">论坛</a></li>
+		</ul>
+		</div>
+	</div>
+
+		<div class="zq_homeView" id="jobs_home_homeView">
+			<div class="zq_pictureBox" node-type="pictureBox">
+				<div class="zq_pictures" node-type="pictures">
+					<a node-type="picItem" href="#" target="_blank"><img alt="满记甜品" src="images/manji.jpg" /></a>
+					<a node-type="picItem" href="http://192.168.69.188/sj/" target="_blank"><img alt="马里奥" src="images/marioBig.jpg" /></a>
+					<a node-type="picItem" href="http://192.168.69.188/Mario/" target="_blank"><img alt="超级玛丽" src="images/mali221.jpg" /></a>
+					<a node-type="picItem" href="http://192.168.69.188/dingding/" target="_blank"><img alt="钉钉" src="images/dingding.jpg "/></a>
+					<a node-type="picItem" href="http://192.168.69.188/chiji/" target="_blank"><img alt="吃鸡" src="images/cjBig.jpg" /></a>
+					<a node-type="picItem" href="http://192.168.69.188/manji/" target="_blank"><img alt="满记甜品" src="images/manji.jpg" /></a>
+					<a node-type="picItem" href="#" target="_blank"><img alt="马里奥" src="images/marioBig.jpg" /></a>
+				</div>
+				<div class='zq_mask zq_maskLeft' node-type="maskLeft"></div>
+				<div class='zq_mask zq_maskRight' node-type="maskRight"></div>
+			</div>
+			<div class="zq_imgBox">
+				<div class="zq_imgs clearfix">
+					<a node-type="smallPic" target="_blank" data-index="1" href="http://192.168.69.188/sj/" class="currentImg"><img alt="马里奥" src="images/mariosmall.jpg" /></a>
+					<a node-type="smallPic" target="_blank" data-index="2" href="http://192.168.69.188/Mario/"><img alt="超级玛丽" src="images/mali2Small.jpg" /></a>
+					<a node-type="smallPic" target="_blank" data-index="3" href="http://192.168.69.188/dingding/"><img alt="钉钉" src="images/钉钉企业项目samll.jpg" /></a>
+					<a node-type="smallPic" target="_blank" data-index="4" href="http://192.168.69.188/chiji/"><img alt="吃鸡" src="images/cjSmall.jpg" /></a>
+					<a node-type="smallPic" target="_blank" data-index="5" href="http://192.168.69.188/manji/"><img alt="满记甜品" src="images/manjiSmall.jpg" /></a>
+				</div>
+				<div class="zq_slides">
+					<a href="javascript:;" class="zq_slideLeft" action-type="prev"><em> </em></a>
+					<a href="javascript:;" class="zq_slideRight" action-type="next"><em> </em></a>
+				</div>
+			</div>
+		</div>
+
+
+	<div class="zshProject">
+		<div class="w">
+
+			<div class="topfont">
+				<div class="hot">优秀项目展示</div>
+			</div>
+
+			<div class=" class">
+				<div class="class-l fl">
+					<img src="imgs/timg.jpg" alt=""/>
+					<div class="tank">
+						<a href="http://192.168.69.188/tank/"><p>坦克大战</p></a>
+					</div>
+				</div>
+
+				<div class="class-r fr">
+					<img src="images/snake.jpg"  alt="">
+					<div class="tank">
+						<a href="http://192.168.69.188/tan"><p>贪吃蛇</p></a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<div class="zshProduce">
+		<div class="w">
+
+			<div class="topfont">
+					<div class="hot">创意项目推荐</div>
+			</div>
+
+			<div class="create">
+				<div class="create-l fl">
+					<a href="#"><img src="images/timg(4).jpg" alt=""></a>
+				</div>
+
+				<div class="create-c fl">
+				<a href="#"><img src="images/timg(4).jpg"  alt=""></a>
+			</div>
+
+				<div class="create-r fr">
+					<a href="#"><img src="images/timg(4).jpg"  alt=""></a>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<!--<div class="w zshFoot">-->
+		<!--<div class="zshMan">-->
+			<!--<div class="txt">项目红人</div>-->
+		<!--</div>-->
+		<!--<div class="zshType fl">-->
+			<!--<div class="first">-->
+			<!--<div class="zshone fl">模块1</div>-->
+			<!--<div class="zshtwo fl">模块2</div>-->
+			<!--<div class="zshthree fl">模块3</div>-->
+			<!--</div>-->
+			<!--<div class="last">-->
+			<!--<div class="zshFour fl">模块4</div>-->
+			<!--<div class="zshFive fl">模块5</div>-->
+			<!--<div class="zshSix fl">模块6</div>-->
+			<!--</div>-->
+
+			<!--<div class="arrow">-->
+				<!--<span class="arrow-left">&lt;</span>-->
+				<!--<span class="arrow-right">&gt;</span>-->
+			<!--</div>-->
+		<!--</div>-->
+	<!--</div>-->
+
+	<div class="zshMessage">
+		<div class="w">
+			<div class="topline">
+				<div class="txt">技术分享留言</div>
+			</div>
+				<div class="container">
+					<div class="video">
+						<img  src="images/65.jpg" width="100%" alt="">
+					</div>
+					<div class="content">
+						<input type="button" value="发射">
+						<input type="text">
+					</div>
+				</div>
+		</div>
+	</div>
+
+	<div class=" zshBottom">
+		<div class="w">
+
+			<div class="zshh">
+				<div class="zshBtop">
+					<div class="zshLeft fl">
+						<img src="logow.png" alt="">
+						<img src="imgs/bottom.png" class="blo" alt="">
+					</div>
+
+					<div class="zshRight fr">
+						<p class="zp1">
+							<a href="#">关于我们</a>
+							<span>|</span>
+							<a href="#">加入我们</a>
+							<span>|</span>
+							<a href="#">合作申请</a>
+							<span>|</span>
+							<a href="#">意见反馈</a>
+						</p>
+						<p class="zp2">
+							<span>粤ICP备13006852号-3</span>&nbsp;&nbsp;
+							<span>粤B2-20180511</span>
+						</p>
+					</div>
+
+				</div>
+
+
+				<div class="zshLine">
+				</div>
+				<div class="zshTxt">
+					<br/>
+					<p>
+						<a href="javascript:;">友情链接：</a>
+						<span>|</span>
+						<a href="http://ntlias-stu.boxuegu.com/#/login">博学谷</a>
+						<span>|</span>
+						<a href="javascript:;">黑马程序员</a>
+						<span>|</span>
+						<a href="javascript:;">深圳前端学院19期</a>
+						<span>|</span>
+						<a href="javascript:;">网吧红人项目组</a>
+					</p>
+					<br/>
+
+					<span>&copy Internet Redman project 好学网</span>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+
+	
+</body>
+<script>
+	
+</script>
+</html>

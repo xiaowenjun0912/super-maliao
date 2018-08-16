@@ -1,0 +1,505 @@
+body,div,ul,li,a,h1{
+  margin:0;
+  padding:0;
+}
+#header a{
+  text-decoration: none;
+  color:#666666;
+  font-family: "微软雅黑";
+  font-size: 18px;
+}
+
+ul{
+  list-style: none;
+}
+#header{
+  margin:0 auto;
+  width: 1000px;
+  height: 80px;
+  background-color: white;
+  overflow: hidden;
+}
+#logo{
+  padding-top: 15px;
+}
+
+h1{
+  float: left;
+}
+
+.lo {
+  width: 40%;
+}
+#header ul{
+  float: right;
+  line-height: 40px;
+}
+#header ul li{
+  float: left;
+  padding: 0 30px;
+}
+#header ul li a:hover{
+  color:red;
+}
+
+.banner{
+  /*background-size: auto;*/
+  width:100%;
+  height: 600px;
+  margin:0 auto;
+  /*overflow: hidden;*/
+}
+
+
+
+/*项目展示*/
+
+.zshProject {
+  width:1000px;
+  height: 500px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+}
+
+.topfont {
+  width: 1000px;
+  height: 120px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #efefef;
+  margin: 0 auto;
+  position: relative;
+}
+
+.topfont .hot {
+  width: 140px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  color: #616161;
+  font-size: 20px;
+  position: absolute;
+  top:105px;
+  left: 430px;
+}
+
+
+.zshProject .class {
+  width: 1000px;
+  height: 316px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.zshProject .class .class-l img{
+  width: 490px;
+  height: 316px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.zshProject .class .class-r img{
+  width: 490px;
+  height: 316px;
+  /*margin-right: 20px;*/
+  position: relative;
+}
+
+.zshProject .class-l .tank {
+  width: 490px;
+  height: 316px;
+  background-color: #ccc;
+}
+
+.zshProject .class-r .tank {
+  width: 490px;
+  height: 316px;
+  background-color: #ccc;
+}
+.zshProject .class-l .tank p {
+  font-size: 28px;
+  color: black;
+  text-align: center;
+  margin: 30% auto;
+}
+
+.zshProject .class-r .tank p {
+  font-size: 28px;
+  color: black;
+  text-align: center;
+  margin: 30% auto;
+}
+
+.zshProject .class .class-l div{
+  width: 490px;
+  height: 316px;
+  /*background-color: #aaa;*/
+  position: absolute;
+  left: 260px;
+  top: 698px;
+  display: none;
+}
+
+.zshProject .class .class-r div{
+  width: 490px;
+  height: 316px;
+  /*background-color: #aaa;*/
+  position: absolute;
+  right: 260px;
+  top: 698px;
+  display: none;
+}
+
+
+
+/*创意推荐*/
+
+.zshProduce {
+  width:1000px;
+  height: 440px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+}
+
+.zshProduce .topfont {
+  width: 1000px;
+  height: 120px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #efefef;
+  margin: 0 auto;
+  position: relative;
+}
+
+.zshProduce .topfont .hot {
+  width: 140px;
+  text-align: center;
+  background-color: #FFFFFF;
+  color: #616161;
+  font-size: 20px;
+  position: absolute;
+  top:105px;
+  left: 430px;
+}
+
+
+
+.zshProduce .create {
+  width: 1000px;
+  height: 300px;
+  margin-top: 40px;
+}
+.zshProduce .create .create-l {
+  margin-left: 50px;
+}
+.zshProduce .create .create-c {
+  margin-left: 90px;
+}
+.zshProduce .create .create-r {
+  margin-right: 40px;
+}
+.zshProduce .create .create-l,.create-c,.create-r {
+  width: 240px;
+  height: 240px;
+  border: 1px solid #fff;
+  overflow: hidden;
+}
+
+.zshProduce .create img {
+  width: 240px;
+  height: 240px;
+}
+
+
+.create img {
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+
+.create img:hover{
+  transform: scale(1.2);
+  border: 0;
+}
+
+
+
+/*项目红人*/
+/*.zshFoot {*/
+  /*width:1000px;*/
+  /*height: 360px;*/
+  /*background-color: #FFFFFF;*/
+/*}*/
+
+/*.zshMan {*/
+  /*width: 1000px;*/
+  /*height: 120px;*/
+  /*margin-top: 30px;*/
+  /*margin-bottom: 40px;*/
+  /*border-bottom: 1px solid #efefef;*/
+  /*margin: 0 auto;*/
+  /*position: relative;*/
+/*}*/
+
+/*.zshMan .txt {*/
+  /*width: 150px;*/
+  /*text-align: center;*/
+  /*background-color: #FFFFFF;*/
+  /*color: #616161;*/
+  /*font-size: 20px;*/
+  /*position: absolute;*/
+  /*top:105px;*/
+  /*left: 430px;*/
+/*}*/
+
+/*.zshType {*/
+  /*width: 1000px;*/
+  /*height: 150px;*/
+  /*margin-top: 50px;*/
+  /*position: relative;*/
+/*}*/
+
+/*.zshone {*/
+  /*width: 313px;*/
+  /*height: 145px;*/
+  /*border:1px solid #efefef;*/
+  /*margin-right: 25px;*/
+/*}*/
+
+/*.zshtwo {*/
+  /*width: 313px;*/
+  /*height: 145px;*/
+  /*border:1px solid #efefef;*/
+  /*margin-right: 29px;*/
+/*}*/
+
+/*.zshthree {*/
+  /*width: 313px;*/
+  /*height: 145px;*/
+  /*border:1px solid #efefef;*/
+/*}*/
+
+/*.zshFour {*/
+  /*width: 313px;*/
+  /*height: 145px;*/
+  /*border:1px solid #efefef;*/
+  /*margin-right: 30px;*/
+  /*position: absolute;*/
+  /*top:0px;*/
+  /*left: 0px;*/
+/*}*/
+
+/*.zshFive {*/
+  /*width: 313px;*/
+  /*height: 145px;*/
+  /*border:1px solid #efefef;*/
+  /*margin-right: 30px;*/
+  /*position: absolute;*/
+  /*top:0px;*/
+  /*left: 340px;*/
+/*}*/
+
+/*.zshSix {*/
+  /*width: 313px;*/
+  /*height: 145px;*/
+  /*border:1px solid #efefef;*/
+  /*position: absolute;*/
+  /*top:0px;*/
+  /*left: 684px;*/
+/*}*/
+
+
+/*.zshType .last {*/
+  /*display: none;*/
+/*}*/
+/*.arrow {*/
+  /*display: none;*/
+/*}*/
+
+/*.zshType:hover .arrow {*/
+  /*display: block;*/
+/*}*/
+
+/*.arrow-left,*/
+/*.arrow-right {*/
+  /*font-family: "SimSun", "宋体";*/
+  /*width: 30px;*/
+  /*height: 60px;*/
+  /*background-color: rgba(0, 0, 0, 0.1);*/
+  /*position: absolute;*/
+  /*top: 50%;*/
+  /*margin-top: -30px;*/
+  /*cursor: pointer;*/
+  /*text-align: center;*/
+  /*line-height: 60px;*/
+  /*color: #fff;*/
+  /*font-weight: 700;*/
+  /*font-size: 30px;*/
+/*}*/
+
+/*.arrow-left:hover,*/
+/*.arrow-right:hover {*/
+  /*background-color: rgba(0, 0, 0, .5);*/
+/*}*/
+
+/*.arrow-left {*/
+  /*left: 0;*/
+/*}*/
+
+/*.arrow-right {*/
+  /*right: 0;*/
+/*}*/
+
+
+/*弹幕*/
+
+
+.zshMessage {
+  width:100%;
+  height: 800px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+}
+
+.zshMessage .topline {
+  width: 1000px;
+  height: 120px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #efefef;
+  margin: 0 auto;
+  position: relative;
+}
+
+.topline .txt {
+  width: 140px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  color: #616161;
+  font-size: 20px;
+  position: absolute;
+  top:105px;
+  left: 430px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.container .video {
+  width: 100%;
+  height: 600px;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .content {
+  background: #333;
+  height: 30px;
+  padding: 10px;
+}
+
+.container .content input {
+  float: right;
+  border: none;
+  outline: none;
+  padding: 0 15px;
+  height: 30px;
+  line-height: 30px;
+}
+
+
+
+
+/*底部*/
+.zshBottom {
+  width: 100%;
+  height: 200px;
+  background-color: #515151;
+}
+
+.zshh{
+  height: 200px;
+}
+
+.zshBtop{
+  width: 1000px;
+  height: 125px;
+  margin:0 auto;
+}
+
+.zshBtop .zshLeft {
+  width: 360px;
+  height: 125px;
+  margin-left: 50px;
+}
+
+.zshBtop .zshLeft img {
+  margin-top: 40px;
+  float: left;
+
+}
+
+.zshBtop .zshLeft .blo {
+  width: 50%;
+  float: left;
+  margin-top: 47px;
+  margin-left: 10px;
+}
+
+.zshBtop .zshLeft span {
+  color:#bdbdbd;
+  margin-left: 30px;
+  font-size: 16px;
+  margin-top: 52px;
+  float: left;
+}
+
+.zshBtop .zshRight {
+  width: 430px;
+  height: 75px;
+  margin-top: 50px;
+}
+
+.zshBtop .zshRight .zp1 a,span {
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.zshBtop .zshRight .zp2 span {
+  color:#999999;
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding-left: 5px;
+}
+
+.zshBtop .zshRight li{
+  float: left;
+}
+
+.zshLine {
+  width: 1000px;
+  margin:0 auto;
+  border-top: 1px solid #5f5f5f;
+}
+
+.zshTxt {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.zshTxt  a:hover {
+  color: #5de1a0;
+}
+
+.zshTxt a , span {
+  font-family: "微软雅黑";
+  color: #999;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-align: center;
+}
